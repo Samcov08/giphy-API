@@ -1,0 +1,54 @@
+body {
+    background: url("https://media.giphy.com/media/xThuWjC7yute751y0g/giphy.gif");
+    background-size: 100%;
+    border: solid palevioletred;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+.btn {
+    margin: 3px;
+    background-color: black;
+    border-color: #fff;
+}
+
+.gifDiv {
+    /*making the images go in one line */
+    float: left;
+    margin: 3px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    border: black
+}
+
+.jumbotron .h1,
+.jumbotron h1 {
+    text-align: center;
+}
+
+#copyright {
+    font-size: 14px;
+}
+
+div#footer {
+    clear: both;
+    margin-top: 40px;
+    position: center;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
