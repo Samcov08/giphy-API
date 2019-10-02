@@ -5,6 +5,7 @@ body {
 }
 
 * {
+    text-align: center;
     box-sizing: border-box;
 }
 
@@ -13,14 +14,19 @@ img {
     width: 150px;
 }
 
+.main {
+    display: flex;
+    justify-content: center;
+    margin: 0% auto;
+}
+
 .btn {
     margin: 3px;
     background-color: black;
-    border-color: #fff;
+    border-color: wheat;
 }
 
 .gifDiv {
-    /*making the images go in one line */
     float: left;
     margin: 3px;
 }
@@ -44,7 +50,7 @@ img {
     font-size: 14px;
 }
 
-div#footer {
+#footer {
     clear: both;
     margin-top: 40px;
     position: center;
