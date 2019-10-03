@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // An array of actions, new actions will be pushed into this array;
-    var oldies = ["Payphones", "Fresh Prince Of Bal Air", "Paigers", "Gameboys", "Drangon ball Z", "Lip Smackers", "Jelly Shoes", "Cripped Hair", "Arcade Games", "Fanny Packs", "The Price Is Right", "Friends", "Pokemon", "Slap Bracelets", "Roller Blades"];
+    var oldies = ["Payphones", "Fresh Prince Of Bal Air", "Paiger", "Gameboys", "Drangon ball Z", "Lip Smackers", "Jelly Shoes", "Cripped Hair", "Arcade Games", "Fanny Packs", "The Price Is Right", "Friends", "Pokemon", "Slap Bracelets", "Roller Blades"];
     var giphy = "";
     // Creating Functions & Methods
     // Function that displays all gif buttons
@@ -8,7 +8,7 @@ $(document).ready(function() {
         $("#gifButtonsView").empty(); // erasing anything in this div id so that it doesnt duplicate the results
         for (var i = 0; i < oldies.length; i++) {
             var gifButton = $("<button>");
-            gifButton.addClass("Giphy");
+            gifButton.addClass("giphy");
             gifButton.addClass("btn btn-primary")
             gifButton.attr("data-name", oldies[i]);
             gifButton.text(oldies[i]);
@@ -35,15 +35,15 @@ $(document).ready(function() {
     function removeLastButton() {
         $("#removeGif").on("click", function() {
             event.preventDefault();
-            oldies.pop(giphy);
+            oldies.pop();
             displayGifButtons();
             return false;
         });
     }
     // Function that displays all of the gifs
-    function displayGifs() {
+    function displayGifs(topic) {
         var giphy = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?" + mykey + "&apikey=sWCkF7H8zFs7sCOkK71WT7YJry15VwDW";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&apikey=sWCkF7H8zFs7sCOkK71WT7YJry15VwDW&limit=10";
 
 
         // displays the constructed url
@@ -90,14 +90,9 @@ $(document).ready(function() {
     removeLastButton();
 
     $(document).on("click", ".giphy", function() {
-        var giphy = $(this).attr('data-state').val();
-        if (giphy === 'still') {
-            $(this).attr('src', $(this).data('animate'));
-            $(this).attr('data-state', 'animate');
-        } else {
-            $(this).attr('src', $(this).data('still'));
-            $(this).attr('data-state', 'still');
-        }
+        // console.log("button clicked")
+        var topic = $(this).attr('data-name');
+        displayGifs(topic)
     });
 
     $(document).on("click", ".image", function() {
