@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // An array of actions, new actions will be pushed into this array;
-    var oldies = ["Payphones", "Fresh Prince Of Bal Air", "Paiger", "Gameboys", "Drangon ball Z", "Lip Smackers", "Jelly Shoes", "Cripped Hair", "Arcade Games", "Fanny Packs", "The Price Is Right", "Friends", "Pokemon", "Slap Bracelets", "Roller Blades"];
+    var oldies = ["Payphones", "Fresh Prince Of Bal Air", "Gameboys", "Drangon ball Z", "Lip Smackers", "Jelly Shoes", "Cripped Hair", "Arcade Games", "Fanny Packs", "The Price Is Right", "Friends", "Pokemon", "Slap Bracelets", "Roller Blades"];
     var giphy = "";
     // Creating Functions & Methods
     // Function that displays all gif buttons
@@ -43,7 +43,7 @@ $(document).ready(function() {
     // Function that displays all of the gifs
     function displayGifs(topic) {
         var giphy = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&apikey=sWCkF7H8zFs7sCOkK71WT7YJry15VwDW&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&apikey=sWCkF7H8zFs7sCOkK71WT7YJry15VwDW&limit=6";
 
 
         // displays the constructed url
