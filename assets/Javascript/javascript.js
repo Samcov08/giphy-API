@@ -29,9 +29,7 @@ $(document).ready(function() {
             return false;
         });
     }
-    // Function to remove last action button
-    // Doesnt work properly yet removes all of the added buttons
-    // rather than just the last
+   
     function removeLastButton() {
         $("#removeGif").on("click", function() {
             event.preventDefault();
