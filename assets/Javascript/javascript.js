@@ -43,7 +43,7 @@ $(document).ready(function() {
     // Function that displays all of the gifs
     function displayGifs(topic) {
         var giphy = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&apikey=sWCkF7H8zFs7sCOkK71WT7YJry15VwDW&limit=6";
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + topic + "&apikey=sWCkF7H8zFs7sCOkK71WT7YJry15VwDW&limit=6";
 
 
         // displays the constructed url
